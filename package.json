@@ -13,6 +13,7 @@
     "remove:logo-bg": "node scripts/remove-logo-background.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
     "deploy": "vercel --prod --yes",
+    "ship": "node scripts/ship.mjs",
     "fetch:stitch-screens": "node scripts/fetch-stitch-screens.mjs",
     "fetch:stitch-screens:all": "node scripts/fetch-stitch-screens.mjs",
     "build:stitch-design-system": "node scripts/build-stitch-design-system.mjs"

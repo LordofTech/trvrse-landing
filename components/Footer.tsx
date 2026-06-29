@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#problem" },
   { label: "Features", href: "#features" },
   { label: "Investors", href: "#investors" },
-  { label: "Contact", href: "mailto:hello@nexxogen.com" },
+  { label: "Contact", href: "mailto:arthur@nexxogenn.com" },
 ];
 
 const socials = [
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 text-center">
           <p className="font-body text-xs text-subtext sm:text-sm">
-            © 2025 Nexxogenn LLP. All rights reserved.
+            © 2026 Nexxogenn LLP. All rights reserved.
           </p>
         </div>
       </div>

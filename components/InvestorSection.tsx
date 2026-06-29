@@ -65,7 +65,7 @@ export default function InvestorSection() {
               Download Pitch Deck
             </a>
             <a
-              href="mailto:hello@nexxogen.com"
+              href="mailto:arthur@nexxogenn.com"
               className="touch-target rounded-card border border-electric/50 px-6 py-3.5 text-center font-body text-sm font-semibold text-white transition-all duration-200 hover:border-electric hover:bg-electric/10 sm:text-base"
             >
               Contact Us
