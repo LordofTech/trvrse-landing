@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none" role="img" aria-label="Trvrse app icon">
+  <defs>
+    <linearGradient id="bg" x1="512" y1="0" x2="512" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F1F35"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+    <linearGradient id="traverseGrad" x1="512" y1="760" x2="512" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D7DD2"/>
+      <stop offset="55%" stop-color="#1FA3C9"/>
+      <stop offset="100%" stop-color="#06D6A0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <circle cx="512" cy="512" r="300" fill="#06D6A0" opacity="0.12"/>
+  <g transform="translate(392 312) scale(2)" filter="url(#glow)">
+    <g fill="url(#traverseGrad)">
+      <path d="M8 34 L28 22 L28 30 L44 30 L44 38 L28 38 L28 46 Z"/>
+      <path d="M112 34 L92 22 L92 30 L76 30 L76 38 L92 38 L92 46 Z"/>
+      <path d="M44 30 H76 V38 H44 Z"/>
+      <path d="M48 38 H56 V96 H48 Z"/>
+      <path d="M64 38 H72 V78 C72 88 68 94 60 96 C68 94 72 88 72 78 V38 Z"/>
+    </g>
+  </g>
+</svg>

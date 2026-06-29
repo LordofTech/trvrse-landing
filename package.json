@@ -1,0 +1,48 @@
+{
+  "name": "trvrse-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate:deck": "python scripts/generate_pitch_deck.py",
+    "generate:brief": "python scripts/generate_project_brief_doc.py",
+    "export:brand": "node scripts/export-brand-assets.mjs",
+    "remove:logo-bg": "node scripts/remove-logo-background.mjs",
+    "generate:favicons": "node scripts/generate-favicons.mjs",
+    "deploy": "vercel --prod --yes",
+    "fetch:stitch-screens": "node scripts/fetch-stitch-screens.mjs",
+    "fetch:stitch-screens:all": "node scripts/fetch-stitch-screens.mjs",
+    "build:stitch-design-system": "node scripts/build-stitch-design-system.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.117.3",
+    "@react-three/fiber": "^8.17.10",
+    "@supabase/supabase-js": "^2.47.10",
+    "canvas-confetti": "^1.9.3",
+    "framer-motion": "^11.15.0",
+    "gsap": "^3.12.5",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@google/stitch-sdk": "^0.3.5",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/three": "^0.171.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8.4.49",
+    "sharp": "^0.35.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}

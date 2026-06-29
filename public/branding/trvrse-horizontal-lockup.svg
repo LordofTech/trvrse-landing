@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" fill="none" role="img" aria-label="Trvrse by Nexxogen">
+  <defs>
+    <linearGradient id="traverseGrad" x1="60" y1="108" x2="60" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D7DD2"/>
+      <stop offset="55%" stop-color="#1FA3C9"/>
+      <stop offset="100%" stop-color="#06D6A0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 20) scale(1)">
+    <g fill="url(#traverseGrad)">
+      <path d="M8 34 L28 22 L28 30 L44 30 L44 38 L28 38 L28 46 Z"/>
+      <path d="M112 34 L92 22 L92 30 L76 30 L76 38 L92 38 L92 46 Z"/>
+      <path d="M44 30 H76 V38 H44 Z"/>
+      <path d="M48 38 H56 V96 H48 Z"/>
+      <path d="M64 38 H72 V78 C72 88 68 94 60 96 C68 94 72 88 72 78 V38 Z"/>
+    </g>
+  </g>
+  <text x="150" y="78" fill="#FFFFFF" font-family="Poppins, Inter, system-ui, sans-serif" font-size="52" font-weight="700" letter-spacing="3">TRVRSE</text>
+  <text x="152" y="108" fill="#8899AA" font-family="Poppins, Inter, system-ui, sans-serif" font-size="16" font-weight="400" letter-spacing="4">by NEXXOGEN</text>
+  <text x="152" y="132" fill="#06D6A0" font-family="Poppins, Inter, system-ui, sans-serif" font-size="14" font-weight="500" letter-spacing="1">Pay Anywhere. Always.</text>
+</svg>
