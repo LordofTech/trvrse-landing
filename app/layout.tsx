@@ -3,14 +3,14 @@ import "@/styles/globals.css";
 import CursorGlow from "@/components/CursorGlow";
 
 export const metadata: Metadata = {
-  title: "Trvrse — The Last Wallet You'll Ever Need | Nexxogen",
+  title: "Trvrse — The Last Wallet You'll Ever Need | Nexxogenn LLP",
   description:
     "Convert any currency. Pay any bank. Anywhere on earth. Instantly. Join the Trvrse waitlist.",
-  keywords: ["fintech", "cross-border payments", "Nigeria", "wallet", "Nexxogen", "Trvrse"],
-  authors: [{ name: "Nexxogen Limited" }],
+  keywords: ["fintech", "cross-border payments", "Nigeria", "wallet", "Nexxogenn LLP", "Trvrse"],
+  authors: [{ name: "Nexxogenn LLP" }],
   openGraph: {
     title: "Trvrse — The Last Wallet You'll Ever Need",
-    description: "Cross-border fintech wallet by Nexxogen. Convert, pay, and transfer globally.",
+    description: "Cross-border fintech wallet by Nexxogenn LLP. Convert, pay, and transfer globally.",
     type: "website",
   },
   icons: {

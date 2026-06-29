@@ -61,7 +61,7 @@ export default function Footer() {
               />
               <span className="font-heading text-xl font-bold leading-none">Trvrse</span>
             </div>
-            <p className="font-body text-sm text-subtext">A Nexxogen product</p>
+            <p className="font-body text-sm text-subtext">A Nexxogenn LLP product</p>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 text-center">
           <p className="font-body text-xs text-subtext sm:text-sm">
-            © 2025 Nexxogen Limited. All rights reserved.
+            © 2025 Nexxogenn LLP. All rights reserved.
           </p>
         </div>
       </div>
