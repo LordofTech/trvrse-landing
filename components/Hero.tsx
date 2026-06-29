@@ -21,11 +21,11 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-electric/30 bg-electric/10 px-4 py-2 sm:mb-10 sm:max-w-fit sm:px-5 sm:py-2.5"
+          className="mb-10 inline-flex max-w-full -translate-x-8 -translate-y-3 items-center justify-center gap-2 rounded-full border border-electric/30 bg-electric/10 px-4 py-2 sm:mb-12 sm:-translate-x-12 sm:px-5 sm:py-2.5 md:-translate-x-16"
         >
           <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald" />
           <span className="text-center font-body text-xs leading-snug text-subtext sm:whitespace-nowrap sm:text-sm">
-            by Nexxogen · Cross-border fintech
+            by Nexxogenn LLP
           </span>
         </motion.div>
 
