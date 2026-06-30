@@ -1,17 +1,24 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 import CursorGlow from "@/components/CursorGlow";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Trvrse — The Last Wallet You'll Ever Need | Nexxogenn LLP",
   description:
     "Convert any currency. Pay any bank. Anywhere on earth. Instantly. Join the Trvrse waitlist.",
   keywords: ["fintech", "cross-border payments", "Nigeria", "wallet", "Nexxogenn LLP", "Trvrse"],
   authors: [{ name: "Nexxogenn LLP" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Trvrse — The Last Wallet You'll Ever Need",
     description: "Cross-border fintech wallet by Nexxogenn LLP. Convert, pay, and transfer globally.",
     type: "website",
+    url: SITE_URL,
+    siteName: "Trvrse",
   },
   icons: {
     icon: [

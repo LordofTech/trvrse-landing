@@ -31,4 +31,4 @@ run("npx vercel deploy --prod --yes");
 
 console.log("\nShipped.");
 console.log("GitHub: https://github.com/LordofTech/trvrse-landing");
-console.log("Live:   https://trvrse-landing.vercel.app");
+console.log("Live:   https://trvrse.app");
