@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionWrapper, { AnimatedHeading } from "./SectionWrapper";
 import Globe3D from "./Globe3D";
+import { getGmailComposeUrl } from "@/lib/contact";
 
 const metrics = [
   { value: "190B", label: "Global remittance market size" },
@@ -65,7 +66,9 @@ export default function InvestorSection() {
               Download Pitch Deck
             </a>
             <a
-              href="mailto:arthur@nexxogenn.com"
+              href={getGmailComposeUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="touch-target rounded-card border border-electric/50 px-6 py-3.5 text-center font-body text-sm font-semibold text-white transition-all duration-200 hover:border-electric hover:bg-electric/10 sm:text-base"
             >
               Contact Us

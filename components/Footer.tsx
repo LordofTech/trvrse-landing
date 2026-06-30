@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BRAND } from "@/lib/branding";
+import { getGmailComposeUrl } from "@/lib/contact";
 
 const links = [
-  { label: "About", href: "#problem" },
-  { label: "Features", href: "#features" },
-  { label: "Investors", href: "#investors" },
-  { label: "Contact", href: "mailto:arthur@nexxogenn.com" },
+  { label: "About", href: "#problem", external: false },
+  { label: "Features", href: "#features", external: false },
+  { label: "Investors", href: "#investors", external: false },
+  { label: "Contact", href: getGmailComposeUrl(), external: true },
 ];
 
 const socials = [
@@ -69,6 +70,9 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="font-body text-sm text-subtext transition-colors duration-200 hover:text-white"
               >
                 {link.label}
