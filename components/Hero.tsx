@@ -25,7 +25,7 @@ export default function Hero() {
         >
           <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald" />
           <span className="text-center font-body text-xs leading-snug text-subtext sm:whitespace-nowrap sm:text-sm">
-            by Nexxogenn LLP
+            by Nexogen Holdings Limited
           </span>
         </motion.div>
 

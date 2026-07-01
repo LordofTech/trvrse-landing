@@ -5,17 +5,17 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Trvrse — The Last Wallet You'll Ever Need | Nexxogenn LLP",
+  title: "Trvrse — The Last Wallet You'll Ever Need | Nexogen Holdings Limited",
   description:
     "Convert any currency. Pay any bank. Anywhere on earth. Instantly. Join the Trvrse waitlist.",
-  keywords: ["fintech", "cross-border payments", "Nigeria", "wallet", "Nexxogenn LLP", "Trvrse"],
-  authors: [{ name: "Nexxogenn LLP" }],
+  keywords: ["fintech", "cross-border payments", "Nigeria", "wallet", "Nexogen Holdings Limited", "Trvrse"],
+  authors: [{ name: "Nexogen Holdings Limited" }],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Trvrse — The Last Wallet You'll Ever Need",
-    description: "Cross-border fintech wallet by Nexxogenn LLP. Convert, pay, and transfer globally.",
+    description: "Cross-border fintech wallet by Nexogen Holdings Limited. Convert, pay, and transfer globally.",
     type: "website",
     url: SITE_URL,
     siteName: "Trvrse",
