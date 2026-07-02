@@ -12,6 +12,7 @@
     "export:brand": "node scripts/export-brand-assets.mjs",
     "remove:logo-bg": "node scripts/remove-logo-background.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
+    "generate:logo-svg": "node scripts/generate-logo-svg.mjs",
     "deploy": "vercel --prod --yes",
     "ship": "node scripts/ship.mjs",
     "fetch:stitch-screens": "node scripts/fetch-stitch-screens.mjs",
@@ -42,6 +43,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "postcss": "^8.4.49",
+    "potrace": "^2.1.8",
     "sharp": "^0.35.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
