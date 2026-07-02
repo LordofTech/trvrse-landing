@@ -29,6 +29,22 @@ function isCheckerboardPixel(r, g, b, a) {
   return false;
 }
 
+/** Solid dark navy field (e.g. Gemini export on #020617) */
+function isSolidDarkBackground(r, g, b, a) {
+  if (a < 8) return true;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const spread = max - min;
+  const avg = (r + g + b) / 3;
+
+  return max < 58 && avg < 48 && spread < 40 && b >= r;
+}
+
+function isBackgroundPixel(r, g, b, a) {
+  return isCheckerboardPixel(r, g, b, a) || isSolidDarkBackground(r, g, b, a);
+}
+
 function isFlatSquircleFill(r, g, b, a) {
   if (a < 8) return false;
 
@@ -64,25 +80,30 @@ function alphaAt(x, y) {
   return data[idx(x, y) * 4 + 3];
 }
 
-function pushIfCheckerboard(x, y) {
+function isDarkFringe(r, g, b, a) {
+  if (a < 8) return false;
+  return isSolidDarkBackground(r, g, b, a);
+}
+
+function pushIfBackground(x, y) {
   if (x < 0 || y < 0 || x >= width || y >= height) return;
   const i = idx(x, y);
   if (visited[i]) return;
 
   const p = i * 4;
-  if (!isCheckerboardPixel(data[p], data[p + 1], data[p + 2], data[p + 3])) return;
+  if (!isBackgroundPixel(data[p], data[p + 1], data[p + 2], data[p + 3])) return;
 
   visited[i] = 1;
   queue.push(i);
 }
 
 for (let x = 0; x < width; x++) {
-  pushIfCheckerboard(x, 0);
-  pushIfCheckerboard(x, height - 1);
+  pushIfBackground(x, 0);
+  pushIfBackground(x, height - 1);
 }
 for (let y = 0; y < height; y++) {
-  pushIfCheckerboard(0, y);
-  pushIfCheckerboard(width - 1, y);
+  pushIfBackground(0, y);
+  pushIfBackground(width - 1, y);
 }
 
 while (queue.length > 0) {
@@ -90,10 +111,10 @@ while (queue.length > 0) {
   const x = i % width;
   const y = (i - x) / width;
 
-  pushIfCheckerboard(x - 1, y);
-  pushIfCheckerboard(x + 1, y);
-  pushIfCheckerboard(x, y - 1);
-  pushIfCheckerboard(x, y + 1);
+  pushIfBackground(x - 1, y);
+  pushIfBackground(x + 1, y);
+  pushIfBackground(x, y - 1);
+  pushIfBackground(x, y + 1);
 }
 
 for (let i = 0; i < total; i++) {
@@ -123,7 +144,7 @@ for (let pass = 0; pass < 10; pass++) {
       const g = data[p + 1];
       const b = data[p + 2];
 
-      if (isLightFringe(r, g, b, data[p + 3])) {
+      if (isLightFringe(r, g, b, data[p + 3]) || isDarkFringe(r, g, b, data[p + 3])) {
         data[p + 3] = 0;
         changed = true;
       }
@@ -133,26 +154,31 @@ for (let pass = 0; pass < 10; pass++) {
   if (!changed) break;
 }
 
-for (let i = 0; i < total; i++) {
-  const p = i * 4;
-  const r = data[p];
-  const g = data[p + 1];
-  const b = data[p + 2];
-  const a = data[p + 3];
+const useSquircleFill = output.includes("app-icon");
 
-  if (a === 0) continue;
+if (useSquircleFill) {
+  for (let i = 0; i < total; i++) {
+    const p = i * 4;
+    const r = data[p];
+    const g = data[p + 1];
+    const b = data[p + 2];
+    const a = data[p + 3];
 
-  if (isFlatSquircleFill(r, g, b, a)) {
-    data[p] = SITE_NAVY.r;
-    data[p + 1] = SITE_NAVY.g;
-    data[p + 2] = SITE_NAVY.b;
-    data[p + 3] = 255;
+    if (a === 0) continue;
+
+    if (isFlatSquircleFill(r, g, b, a)) {
+      data[p] = SITE_NAVY.r;
+      data[p + 1] = SITE_NAVY.g;
+      data[p + 2] = SITE_NAVY.b;
+      data[p + 3] = 255;
+    }
   }
 }
 
 await sharp(data, {
   raw: { width, height, channels: 4 },
 })
+  .trim({ threshold: 12 })
   .png()
   .toFile(output);
 
