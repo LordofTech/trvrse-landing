@@ -56,10 +56,9 @@ export default function Navbar() {
             alt="Trvrse"
             width={48}
             height={48}
-            className="h-12 w-12 shrink-0 object-contain brightness-110 saturate-125 drop-shadow-[0_0_10px_rgba(6,214,160,0.45)]"
+            className="h-12 w-12 shrink-0 object-contain"
             priority
           />
-          <span className="font-heading text-lg font-bold leading-none">Trvrse</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

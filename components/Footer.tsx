@@ -58,9 +58,8 @@ export default function Footer() {
                 alt="Trvrse"
                 width={56}
                 height={56}
-                className="h-14 w-14 shrink-0 object-contain brightness-110 saturate-125 drop-shadow-[0_0_12px_rgba(6,214,160,0.45)]"
+                className="h-14 w-14 shrink-0 object-contain"
               />
-              <span className="font-heading text-xl font-bold leading-none">Trvrse</span>
             </div>
             <p className="font-body text-sm text-subtext">A Nexogen Holdings Limited product</p>
           </div>

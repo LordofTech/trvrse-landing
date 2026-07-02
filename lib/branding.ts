@@ -2,9 +2,9 @@
 
 export const BRAND = {
 
-  logomark: "/branding/trvrse-app-icon.png",
+  logomark: "/branding/trvrse-logo.png",
 
-  appIcon: "/branding/trvrse-app-icon.png",
+  appIcon: "/branding/trvrse-logo.png",
 
   lockupsNavy: "/branding/trvrse-lockups-navy.png",
 
